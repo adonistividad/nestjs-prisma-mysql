@@ -42,7 +42,7 @@ export class ArticlesController {
 
   @Get(':id')
   @ApiOkResponse({ type: ArticleEntity })
-  async findOne(@Param('id') id: string) {
+  async findOne(@Param('id') id: number) {
     const article = await this.articlesService.findOne(+id);
     console.log('article::', article);
     if (!article) {
@@ -53,13 +53,13 @@ export class ArticlesController {
 
   @Patch(':id')
   @ApiCreatedResponse({ type: ArticleEntity })
-  update(@Param('id') id: string, @Body() updateArticleDto: UpdateArticleDto) {
+  update(@Param('id') id: number, @Body() updateArticleDto: UpdateArticleDto) {
     return this.articlesService.update(+id, updateArticleDto);
   }
 
   @Delete(':id')
   @ApiOkResponse({ type: ArticleEntity })
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.articlesService.remove(+id);
   }
 }

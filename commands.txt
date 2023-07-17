@@ -4,6 +4,8 @@ yarn add -D prisma
 yarn add @prisma/client
 yarn start:dev
 
+NOTE: The "mongodb" provider is not supported with this command.
+--------------------------------------------------------------------
 npx prisma migrate dev --name init
 npx prisma migrate reset
 
@@ -19,4 +21,5 @@ nest g resource articles
 yarn add class-validator class-transformer
 
 npx nest g filter prisma-client-exception
+
 

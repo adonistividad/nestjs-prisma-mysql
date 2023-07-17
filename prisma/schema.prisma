@@ -6,12 +6,14 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "mysql" 
+  // provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model Article {
-  id          Int      @id @default(autoincrement())
+  id          Int      @id @default(autoincrement()) //-- for mysql
+  // id          String   @id @default(auto()) @map("_id") @db.ObjectId  //-- for mongdb
   title       String   @unique
   description String?
   body        String
