@@ -6,6 +6,7 @@ yarn start:dev
 
 NOTE: The "mongodb" provider is not supported with this command.
 --------------------------------------------------------------------
+npx prisma init
 npx prisma migrate dev --name init
 npx prisma migrate reset
 
@@ -23,3 +24,5 @@ yarn add class-validator class-transformer
 npx nest g filter prisma-client-exception
 
 
+yarn add @nestjs/passport passport passport-local
+yarn add @types/passport
