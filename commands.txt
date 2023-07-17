@@ -1,0 +1,22 @@
+
+
+yarn add -D prisma 
+yarn add @prisma/client
+yarn start:dev
+
+npx prisma migrate dev --name init
+npx prisma migrate reset
+
+npx prisma db seed
+npx prisma studio
+
+yarn add @nestjs/swagger swagger-ui-express
+
+nest g resource articles
+? What transport layer do you use? REST API
+? Would you like to generate CRUD entry points? Yes
+
+yarn add class-validator class-transformer
+
+npx nest g filter prisma-client-exception
+
